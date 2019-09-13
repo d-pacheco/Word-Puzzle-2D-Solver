@@ -1,0 +1,14 @@
+int len_puzzle(FILE *puzzle_file);
+void create_puzzle(int puzzle_len, char puzzle[puzzle_len][puzzle_len], FILE *puzzle_file);
+long long int hash(char word[]);
+long long int update_hash(long long int substr_hash, char perv_letter, char new_letter, int word_len);
+void printHashTable(int puzzle_len, long long int hashTable[puzzle_len][puzzle_len][8]);
+void get_hRightHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_hLeftHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_vDownHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_vUpHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_TlBrDiagHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_BrBackTlDiagHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_BlTrDiagHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+void get_TrBackBlDiagHashs(int puzzle_len, char puzzle[puzzle_len][puzzle_len],long long int hashTable[puzzle_len][puzzle_len][8], int word_len);
+int findCoords(int puzzle_len, long long int hashTable[puzzle_len][puzzle_len][8], long long int word_hash, char word[101], FILE *solution_file);
